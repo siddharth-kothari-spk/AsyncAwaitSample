@@ -13,6 +13,11 @@ struct GitUser: Codable {
     let bio: String
 }
 
+enum GitUserError: Error {
+    case invalidURL
+    case invalidResponse
+    case invalidData
+}
 /*
  {
    "login": "siddharth-kothari-spk",
