@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
+ /*   @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
@@ -71,18 +71,37 @@ struct ContentView: View {
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
         }
+    }*/
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Circle()
+                .foregroundColor(.secondary)
+                .frame(width: 120, height: 120)
+            
+            Text("Username")
+                .bold()
+                .font(.title3)
+            
+            Text("Sample bio")
+                .padding()
+            
+            Spacer()
+        }
+        .padding()
     }
 }
 
-private let itemFormatter: DateFormatter = {
+/*private let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
     formatter.timeStyle = .medium
     return formatter
-}()
+}()*/
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+      //  ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView()
     }
 }
