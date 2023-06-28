@@ -73,22 +73,40 @@ struct ContentView: View {
         }
     }*/
     
+    @State private var user: GitUser?
     var body: some View {
         VStack(spacing: 20) {
             Circle()
                 .foregroundColor(.secondary)
                 .frame(width: 120, height: 120)
             
-            Text("Username")
+            Text(user?.login ?? "Username")
                 .bold()
                 .font(.title3)
             
-            Text("Sample bio")
+            Text(user?.bio ?? "Sample bio")
                 .padding()
             
             Spacer()
         }
         .padding()
+        .task {
+            do {
+                user = try await APIService.shared.getUser()
+            }
+            catch GitUserError.invalidURL {
+                print("invalidURL")
+            }
+            catch GitUserError.invalidResponse {
+                print("invalidResponse")
+            }
+            catch GitUserError.invalidData {
+                print("invalidData")
+            }
+            catch {
+                print("unexpected error")
+            }
+        }
     }
 }
 
