@@ -16,6 +16,7 @@
 		B1E718BA2A4C675E00E90F6B /* AsyncAwaitSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E718B92A4C675E00E90F6B /* AsyncAwaitSampleTests.swift */; };
 		B1E718C42A4C675E00E90F6B /* AsyncAwaitSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E718C32A4C675E00E90F6B /* AsyncAwaitSampleUITests.swift */; };
 		B1E718C62A4C675E00E90F6B /* AsyncAwaitSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E718C52A4C675E00E90F6B /* AsyncAwaitSampleUITestsLaunchTests.swift */; };
+		B1E718D42A4C6A0300E90F6B /* GitUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E718D32A4C6A0300E90F6B /* GitUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		B1E718BF2A4C675E00E90F6B /* AsyncAwaitSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncAwaitSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1E718C32A4C675E00E90F6B /* AsyncAwaitSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitSampleUITests.swift; sourceTree = "<group>"; };
 		B1E718C52A4C675E00E90F6B /* AsyncAwaitSampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitSampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B1E718D32A4C6A0300E90F6B /* GitUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		B1E718A22A4C675B00E90F6B /* AsyncAwaitSample */ = {
 			isa = PBXGroup;
 			children = (
+				B1E718D22A4C69EE00E90F6B /* Model */,
 				B1E718A32A4C675B00E90F6B /* AsyncAwaitSampleApp.swift */,
 				B1E718A52A4C675B00E90F6B /* ContentView.swift */,
 				B1E718A72A4C675E00E90F6B /* Assets.xcassets */,
@@ -131,6 +134,14 @@
 				B1E718C52A4C675E00E90F6B /* AsyncAwaitSampleUITestsLaunchTests.swift */,
 			);
 			path = AsyncAwaitSampleUITests;
+			sourceTree = "<group>";
+		};
+		B1E718D22A4C69EE00E90F6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B1E718D32A4C6A0300E90F6B /* GitUser.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				B1E718A62A4C675B00E90F6B /* ContentView.swift in Sources */,
 				B1E718A42A4C675B00E90F6B /* AsyncAwaitSampleApp.swift in Sources */,
 				B1E718B02A4C675E00E90F6B /* AsyncAwaitSample.xcdatamodeld in Sources */,
+				B1E718D42A4C6A0300E90F6B /* GitUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
