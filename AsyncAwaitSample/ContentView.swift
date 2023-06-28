@@ -76,10 +76,19 @@ struct ContentView: View {
     @State private var user: GitUser?
     var body: some View {
         VStack(spacing: 20) {
-            Circle()
-                .foregroundColor(.secondary)
-                .frame(width: 120, height: 120)
             
+            AsyncImage(url: URL(string: user?.avatarUrl ?? "")) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(Circle())
+            } placeholder: {
+                Circle()
+                    .foregroundColor(.secondary)
+                    
+            }
+            .frame(width: 120, height: 120)
+        
             Text(user?.login ?? "Username")
                 .bold()
                 .font(.title3)
